@@ -1,0 +1,26 @@
+.image-container {
+    position: relative;
+    width: 1200px; /* Match the image width */
+    height: 500px; /* Match the image height */
+}
+.tabla img{
+    position: relative;
+    width: 100px; /* Match the image width */
+    height: 100px; /* Match the image height */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to truly center */
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
+}
