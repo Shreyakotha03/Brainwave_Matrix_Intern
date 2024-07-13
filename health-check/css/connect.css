@@ -1,0 +1,174 @@
+:root {
+    --darkMaroon: #b40955;
+    --middleShade: #d43678;
+    --lightMaroon: #c13270;
+    --pink: #ec5c9c;
+    --cyan: #caf1ed;
+    --voilet: #c37b9d;
+    --voiletPink: #ea93bc;
+    --darkPurple: #85365e;
+    --color-white: #fff;
+    --color-black: black;
+    --color-gray: #75787b;
+    --color-gray-light: #bbb;
+    --color-gray-disabled: #e8e8e8;
+    --color-green: #53a318;
+    --color-red: red;
+    --color-orange: darkorange;
+    --color-yellow: #edd002;
+    --font-size-small: 0.75rem;
+    --font-size-default: 0.875rem;
+    --color-darkgray-disabled: #292b2c;
+    --color-gradient: linear-gradient(138.69deg, #b6195c 0%, #c37b9d 107.33%);
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  #navbar {
+    background-image: var(--color-gradient);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 12px;
+  }
+  
+  #navbar ul {
+    list-style-type: none;
+    color: white;
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #navbar ul li {
+    cursor: pointer;
+    position: relative;
+    font-weight: 700;
+    color: var(--color-white);
+  }
+  
+  #navbar ul li::before {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background-color: var(--color-white);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+  }
+  
+  #navbar ul li:hover::before {
+    left: -10%;
+    width: 120%;
+  }
+  
+  body {
+    color: var(--color-black);
+  }
+  
+  .connect-section {
+    margin: 50px 0;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .connect-section h1 {
+    color: var(--darkPurple);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .connect-section p {
+    color: var(--color-gray);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .doctor-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .doctor-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .doctor-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .doctor-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .doctor-card h2 {
+    color: var(--middleShade);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .doctor-card p {
+    color: var(--color-gray);
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    background-color: var(--darkMaroon);
+    color: var(--color-white);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: var(--middleShade);
+  }
+  
+  footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  footer a {
+    color: var(--darkMaroon);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  footer a:hover {
+    color: var(--color-white);
+  }
+  
+  footer p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  
