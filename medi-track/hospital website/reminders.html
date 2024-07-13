@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Reminders</title>
+    <link rel="stylesheet" href="css/reminder.css">
+    <style>
+        /* Add some basic styles for clarity */
+        .record {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Health App</div>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Doctors</a>
+            <a href="#">Appointments</a>
+            <a href="#">Reminders</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+
+    <section class="container">
+        <h1 class="heading">Set <span>Reminders</span></h1>
+        <form class="reminder-form" id="reminderForm">
+            <label for="appointment-date">Appointment Date:</label>
+            <input type="date" id="appointment-date" name="appointment-date" required>
+
+            <label for="appointment-time">Appointment Time:</label>
+            <input type="time" id="appointment-time" name="appointment-time" required>
+
+            <label for="doctor-name">Doctor's Name:</label>
+            <input type="text" id="doctor-name" name="doctor-name" required>
+
+            <label for="appointment-reason">Reason for Appointment:</label>
+            <textarea id="appointment-reason" name="appointment-reason" rows="3" required></textarea>
+
+            <button type="submit">Set Reminder</button>
+        </form>
+
+        <h2 class="heading">Appointment <span>Records</span></h2>
+        <div class="records" id="recordsContainer">
+            <div class="record">
+                <h3>Dr. Smith</h3>
+                <p>Date: 2023-07-12</p>
+                <p>Time: 10:00 AM</p>
+                <p>Reason: Routine Checkup</p>
+            </div>
+            <div class="record">
+                <h3>Dr. Johnson</h3>
+                <p>Date: 2023-07-19</p>
+                <p>Time: 2:00 PM</p>
+                <p>Reason: Follow-up</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('reminderForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get values from form
+            const date = document.getElementById('appointment-date').value;
+            const time = document.getElementById('appointment-time').value;
+            const doctorName = document.getElementById('doctor-name').value;
+            const reason = document.getElementById('appointment-reason').value;
+
+            // Create new record element
+            const newRecord = document.createElement('div');
+            newRecord.classList.add('record');
+            newRecord.innerHTML = `
+                <h3>${doctorName}</h3>
+                <p>Date: ${date}</p>
+                <p>Time: ${time}</p>
+                <p>Reason: ${reason}</p>
+            `;
+
+            // Append new record to records container
+            document.getElementById('recordsContainer').appendChild(newRecord);
+            
+            // Reset form fields
+            this.reset();
+        });
+    </script>
+</body>
+</html>

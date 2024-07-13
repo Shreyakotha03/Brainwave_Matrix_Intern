@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24/7 Pharmacy Services</title>
+    <link rel="stylesheet" href="css/pharmacy.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo"> <i class="fas fa-pills"></i> 24/7 Pharmacy </a>
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="index.html">services</a>
+            <a href="index.html">about</a>
+            <a href="index.html">contact</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="image">
+            <img src="image/phar.jpg" alt="Pharmacy">
+        </div>
+        <div class="content">
+            <h3>Your 24/7 Online Pharmacy</h3>
+            <p>Get your medications anytime, anywhere. Fast, reliable, and always open.</p>
+            <a href="#" class="btn">Get Started <span class="fas fa-arrow-right"></span></a>
+        </div>
+    </section>
+
+    <section class="icons-container">
+        <div class="icons">
+            <i class="fas fa-shipping-fast"></i>
+            <h3>Free Delivery</h3>
+            <p>On all orders over $50</p>
+        </div>
+        <div class="icons">
+            <i class="fas fa-pills"></i>
+            <h3>Wide Range</h3>
+            <p>Of medicines and health products</p>
+        </div>
+        <div class="icons">
+            <i class="fas fa-user-md"></i>
+            <h3>Expert Support</h3>
+            <p>From certified pharmacists</p>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h1 class="heading"> our <span>services</span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-capsules"></i>
+                <h3>Prescription Refills</h3>
+                <p>Easy and quick prescription refills.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-syringe"></i>
+                <h3>Vaccinations</h3>
+                <p>Get vaccinated with ease at our locations.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-first-aid"></i>
+                <h3>Health Advice</h3>
+                <p>Consult our experts for health advice.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="index.html"> <i class="fas fa-angle-right"></i> home </a>
+                <a href="index.html"> <i class="fas fa-angle-right"></i> services </a>
+                <a href="index.html"> <i class="fas fa-angle-right"></i> about </a>
+                <a href="index.html"> <i class="fas fa-angle-right"></i> contact </a>
+            </div>
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +91 8074455098 </a>
+                <a href="#"> <i class="fas fa-envelope"></i> Medi-Track@pharmacy.com </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> 123 peerzadiguda,hyd </a>
+            </div>
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+                <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+            </div>
+        </div>
+        <div class="credit"> created by <span>Shreya</span> | all rights reserved </div>
+    </footer>
+
+    <script>
+        let menu = document.querySelector('#menu-btn');
+        let navbar = document.querySelector('.header .navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        }
+    </script>
+
+</body>
+</html>
